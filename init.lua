@@ -1,19 +1,14 @@
--- Enable line numbers on the left side of the editor
-vim.opt.number = true
+-- theme & transparency
+vim.cmd.colorscheme("unokai")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
--- Tell Neovim that your terminal background is dark
-vim.opt.background = "dark"
-
--- Set the colorscheme to 'elflord'
-vim.cmd("colorscheme elflord")
-
--- Highlight the line where the cursor is
-vim.opt.cursorline = true
-
--- Enable horizontal scrolling
-vim.opt.wrap = false          -- Disable line wrapping
-vim.opt.sidescroll = 1        -- Scroll 1 column at a time when cursor hits edge
-vim.opt.sidescrolloff = 8     -- Keep 8 columns visible around the cursor
-
---system clipboard
-vim.opt.clipboard = "unnamedplus"
+-- Basic settings
+vim.opt.number = true                              -- Line numbers
+vim.opt.relativenumber = true                      -- Relative line numbers
+vim.opt.cursorline = true                          -- Highlight current line
+vim.opt.wrap = false                               -- Don't wrap lines
+vim.opt.scrolloff = 10                             -- Keep 10 lines above/below cursor 
+vim.opt.sidescrolloff = 8                          -- Keep 8 columns left/right of cursor
+vim.opt.clipboard = "unnamedplus"		               -- Use system clipboard
